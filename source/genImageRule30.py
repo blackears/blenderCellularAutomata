@@ -66,6 +66,9 @@ class GenImageRule30Operator(bpy.types.Operator):
                 p1 = cells[(j - 1) * width + i]
                 p2 = 0 if i == width - 1 else cells[(j - 1) * width + i + 1]
                 
+                if props.start_state == 'RANDOM' and i == 0:
+                    p0 = random.randint(0, 1)
+                
                 #apply rule 30
                 code = p0 * 4 + p1 * 2 + p2
                 value = 0

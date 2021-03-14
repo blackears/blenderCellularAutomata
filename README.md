@@ -4,7 +4,7 @@ Generates a texture using a cellular automa algorithm.  Generated images are sto
 
 ### Rule 30
 
-[![Texture generated with Rule 30](doc/rule30Monkey.png)
+![Texture generated with Rule 30](doc/rule30Monkey.png)
 
 An implementation of Stephen Wolfram's Rule30 algoritm.  Creates a semi-repeating triangle pattern reminiscent of natural patterns like the surface of a seashell.  https://en.m.wikipedia.org/wiki/Rule_30
 
@@ -28,6 +28,13 @@ Seed to initialize the random number generator.
 
 
 
+## Building
+
+To build, execute the *makeDeploy.py* script in the root of the project.  It will create a directory called *deploy* that contains a zip file containing the addon.
+
+## Installation
+
+To install, start Blender and select Edit > Preferences from the menubar.  Select the Add-ons tab and then press the Install button.  Browse to the .zip file that you built and select it.  Finally, tick the checkbox next to Add Mesh: Normal Brush.
 
 
 

@@ -2,7 +2,7 @@
 
 Generates a texture using a cellular automa algorithm.  Generated images are stored in Blender's memory, so you amy want to save it to disk after it's generated.
 
-### Rule 30
+## Rule 30
 
 ![Texture generated with Rule 30](doc/rule30Monkey.png)
 

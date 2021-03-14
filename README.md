@@ -18,9 +18,12 @@ Width of generated image.
 #### Height
 Height of generated image.
 
+#### Wrap
+Wrap image in the X direction.
+
 #### Start State
 - **Single Cell** - Begin with a single black pixel centered on the edge of the image.  The triangle expands from there.  The classic start of the original algorithm.
-- **Random** - The bottom and left edge of the image are set to random values.  The Rule 30 pattern grows out of these.
+- **Random** - The bottom edge of image is set to random values.  If wrap is not selected, the left edge is also set to random values.  These are used as the seeds that the Rule 30 pattern grows from.
 
 #### Random Seed
 

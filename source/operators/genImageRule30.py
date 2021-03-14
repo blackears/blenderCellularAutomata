@@ -39,6 +39,10 @@ class GenImageRule30Settings(bpy.types.PropertyGroup):
         name="Height", description="Height of image", default = 512, min=1, soft_max = 1024
     )
 
+    wrap : bpy.props.BoolProperty(
+        name="Wrap", description="Generated texture wraps in the X direction", default = True
+    )
+
     rand_seed : bpy.props.IntProperty(
         name="Random Seed", description="Random Seed", default = 0
     )
@@ -68,7 +72,8 @@ class GenImageRule30Operator(bpy.types.Operator):
         props = context.scene.rule30_props
     
         width = props.width
-        height = props.width
+        height = props.height
+        wrap = props.wrap
         
         cells = [0] * width * height
         
@@ -87,8 +92,16 @@ class GenImageRule30Operator(bpy.types.Operator):
                 p1 = cells[(j - 1) * width + i]
                 p2 = 0 if i == width - 1 else cells[(j - 1) * width + i + 1]
                 
-                if props.start_state == 'RANDOM' and i == 0:
-                    p0 = random.randint(0, 1)
+                if wrap:
+                    if i == 0:
+                        p0 = cells[(j - 1) * width + width - 1]
+                    elif i == width - 1:
+                        p2 = cells[(j - 1) * width]
+                
+                else:
+                    #In random mode, add random left column
+                    if props.start_state == 'RANDOM' and i == 0:
+                        p0 = random.randint(0, 1)
                 
                 #apply rule 30
                 code = p0 * 4 + p1 * 2 + p2
@@ -137,6 +150,7 @@ class GenImageRule30Panel(bpy.types.Panel):
         col.prop(props, "image_name")
         col.prop(props, "width")
         col.prop(props, "height")
+        col.prop(props, "wrap")
         col.prop(props, "start_state")
         col.prop(props, "rand_seed")
         

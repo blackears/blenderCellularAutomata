@@ -37,9 +37,9 @@ def make(copyToBlenderAddons = False, createArchive = False):
     if os.path.exists('build'):
         shutil.rmtree('build')
     os.mkdir('build')
-    os.mkdir('build/cellularAutoma')
+    os.mkdir('build/cellularAutomata')
 
-    copytree("source", "build/cellularAutoma");
+    copytree("source", "build/cellularAutomata");
 
     
     #Build addon zip file
@@ -48,12 +48,12 @@ def make(copyToBlenderAddons = False, createArchive = False):
             shutil.rmtree('deploy')
         os.mkdir('deploy')
 
-        shutil.make_archive("deploy/cellularAutoma", "zip", "build")
+        shutil.make_archive("deploy/cellularAutomata", "zip", "build")
 
 
     if copyToBlenderAddons: 
         addonPath = os.path.join(blenderHome, "scripts/addons")
-        destPath = os.path.join(addonPath, "cellularAutoma")
+        destPath = os.path.join(addonPath, "cellularAutomata")
 
         print("Copying to blender addons: " + addonPath)
         if os.path.exists(destPath):

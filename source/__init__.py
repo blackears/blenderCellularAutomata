@@ -16,14 +16,14 @@
 
 
 bl_info = {
-    "name": "Cellular Automa Texture Generators",
-    "description": "Use cellular automa algorithm to generate semi=random naturalistic textures.",
+    "name": "Cellular Automata Texture Generators",
+    "description": "Use cellular automata algorithm to generate semi=random naturalistic textures.",
     "author": "Mark McKay",
     "version": (1, 0, 0),
     "blender": (2, 80, 0),
     "location": "View3D",
-#    "wiki_url": "https://github.com/blackears/blenderCellularAutoma",
-    "tracker_url": "https://github.com/blackears/blenderCellularAutoma",
+#    "wiki_url": "https://github.com/blackears/blenderCellularAutomata",
+    "tracker_url": "https://github.com/blackears/blenderCellularAutomata",
     "category": "View 3D"
 }
 

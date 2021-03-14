@@ -1,12 +1,12 @@
-# Cellular Automa Images for Blender
+# Cellular Automata Images for Blender
 
-Generates a texture using a cellular automa algorithm.  Generated images are stored in Blender's memory, so you amy want to save it to disk after it's generated.
+Generates a texture using a cellular automata algorithm.  Generated images are stored in Blender's memory, so you may want to save it to disk after it's generated.
 
 ## Rule 30
 
 ![Texture generated with Rule 30](doc/rule30Monkey.png)
 
-An implementation of Stephen Wolfram's Rule30 algoritm.  Creates a semi-repeating triangle pattern reminiscent of natural patterns like the surface of a seashell.  https://en.m.wikipedia.org/wiki/Rule_30
+An implementation of Stephen Wolfram's Rule30 algorithm.  Creates a semi-repeating triangle pattern reminiscent of natural patterns like the surface of a seashell.  https://en.m.wikipedia.org/wiki/Rule_30
 
 
 #### Image Name

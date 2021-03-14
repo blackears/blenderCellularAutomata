@@ -1,10 +1,30 @@
+#  This file is part of the Kitfox Blender Cellular Automa distribution (https://github.com/blackears/blenderCellularAutoma).
+#  Copyright (c) 2021 Mark McKay
+#  
+#  This program is free software: you can redistribute it and/or modify  
+#  it under the terms of the GNU General Public License as published by  
+#  the Free Software Foundation, version 3.
+# 
+#  This program is distributed in the hope that it will be useful, but 
+#  WITHOUT ANY WARRANTY; without even the implied warranty of 
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU 
+#  General Public License for more details.
+# 
+#  You should have received a copy of the GNU General Public License 
+#  along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+
+
+# ===============================================================
+# Generate an image using Stephen Wolfram's Rule 30 algorithm
+# https://en.m.wikipedia.org/wiki/Rule_30
+# ===============================================================
+
+
 import bpy
 
 import random
-#from random import seed
-#from random import random
 
-#https://en.m.wikipedia.org/wiki/Rule_30
 
 class GenImageRule30Settings(bpy.types.PropertyGroup):
     image_name : bpy.props.StringProperty(
@@ -100,7 +120,7 @@ class GenImageRule30Panel(bpy.types.Panel):
     bl_idname = "OBJECT_PT_gen_image_rule30_props"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    bl_context = "objectmode"
+#    bl_context = "objectmode"
     bl_category = "Kitfox"
 
 

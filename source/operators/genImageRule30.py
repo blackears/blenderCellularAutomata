@@ -40,7 +40,7 @@ class GenImageRule30Settings(bpy.types.PropertyGroup):
     )
 
     rand_seed : bpy.props.IntProperty(
-        name="Randon Seed", description="Random Seed", default = 0
+        name="Random Seed", description="Random Seed", default = 0
     )
 
     start_state : bpy.props.EnumProperty(
@@ -48,7 +48,8 @@ class GenImageRule30Settings(bpy.types.PropertyGroup):
             ('SINGLE', "Single Cell", "Start with a singe cell"),
             ('RANDOM', "Random", "First row has random data"),
         ),
-        default='SINGLE'
+        name= "Start State",
+        default='RANDOM'
     )
     
 
